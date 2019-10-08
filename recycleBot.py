@@ -23,23 +23,23 @@ def next_state(state, action):
     global n_state, reward
     if state == states[1]:  # When state is high
         if actions[1]:  # State = high and action = wait
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_wait
         elif actions[3]:  # state = high and action = search
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_search
     elif state == states[0]:  # When state is low
         if actions[0]:  # State = low and action = rescue
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_rescue
         elif actions[1]:  # State = low and action = wait
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_wait
         elif actions[2]:  # State = low and action = recharge
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_recharge
         elif actions[3]:  # State = low and action = search
-            n_state = np.array(state) - np.array(action)
+            n_state = np.array(state) + np.array(action)
             reward = reward_search
 
     return n_state, reward
