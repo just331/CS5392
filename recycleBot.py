@@ -12,7 +12,11 @@ reward_recharge = 0
 # action sets for states high and low
 actionH = [search, wait]
 actionH_prop = .5
-actionL_prob = .333
 
 actionL = [search, wait, recharge]
+actionL_prob = .333
 
+def next_state(state, action):
+
+
+    return n_state, reward
